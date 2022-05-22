@@ -1,0 +1,177 @@
+.hidden {
+    display: none;
+  }
+body{
+    margin: 0px;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.rgyPostIt {
+    position: relative;
+    display: inline-block;
+    padding: 20px 45px 20px 15px;
+    margin: 5px 0;
+    border: 1px solid #f8f861;
+    border-left: 30px solid #f8f861;
+    border-bottom-right-radius: 60px 10px;
+    font-family: 'Nanum Pen Script';
+    font-size: 27px;
+    color: #555;
+    word-break: break-all;
+    background: #ffff88; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(81%, #ffff88), color-stop(82%, #ffff88), color-stop(82%, #ffff88), color-stop(100%, #ffffc6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* IE10+ */
+    background: linear-gradient(135deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff88', endColorstr='#ffffc6', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+div.rgyPostIt::after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 35px;
+    width: 150px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 2px 35px 5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 2px 35px 5px rgba(0, 0, 0, 0.4);
+    transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+div.rgyPostIt:hover {
+    border-bottom-right-radius: 75px 30px;
+}
+
+div.rgyPostIt:hover::after {
+    box-shadow: 2px 37px 7px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 2px 37px 7px rgba(0, 0, 0, 0.37);
+}
+
+div.rgyPostIt > p {
+    padding: 5px 0 !important;
+}
+
+div.rgyPostIt > p::before {
+    content:"\f198";
+    margin-right: 7px;
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+div.rgyPostIt > p > a {
+    color: #555;
+}
+/* 포스트잇 모듈 (마크1) 끝 */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 0.8fr 2fr 0.8fr;
+	grid-template-areas:
+		"header header header"
+		"   a    main    b   "
+		"footer footer footer";
+    margin: 0 auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 90%;
+    height: 100%;
+}
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    justify-content: center;
+    align-items: center;
+}
+#login-form {
+    text-align: center;
+    display: block;
+    
+}
+#firstWindow{
+    text-align: center;
+    
+}
+/* .flex{
+    display: flex;  
+    align-items: center;
+} */
+.header { 
+    grid-area: header;  
+}
+.box{
+    background-color: rgba(233,236,105,0.1);
+    border-radius: 30px;
+    place-items: center;
+
+}
+#greeting{
+    text-align: center;
+    grid-column: 2;
+}
+#header-container{
+    text-align: center;
+    display: grid;
+    grid-template-columns:0.8fr 1.2fr 0.8fr;
+
+}
+#weather-box{
+    grid-column: 1;
+
+}
+.a{
+    grid-area: a;
+    text-align: center;
+    grid-template-rows: 0.8fr,1.2fr;
+}
+.main{
+    grid-area: main;
+    text-align: center;
+}
+#clock-box{
+    text-align: center;
+    grid-row: 1;
+}
+.input{
+    opacity:0.5;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.b{
+    grid-area: b;
+    text-align: center;
+    grid-template-rows: 0.8fr,1.2fr;
+}
+.footer{
+    grid-area: footer;
+}
