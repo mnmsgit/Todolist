@@ -103,28 +103,21 @@ div.rgyPostIt > p > a {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    z-index: 2;  /*Specify a stack order in case you're using a different order for other elements */
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px);
 }
-#login-form {
-    text-align: center;
-    display: block;
-    
-}
-#firstWindow{
-    text-align: center;
-    
-}
-/* .flex{
-    display: flex;  
+.beforeIogin{
+    justify-content: center;
     align-items: center;
-} */
+    text-align: center;
+}
 .header { 
     grid-area: header;  
 }
 .box{
-    background-color: rgba(233,236,105,0.1);
+    /* background-color: rgba(233,236,105,0.1); */
     border-radius: 30px;
     place-items: center;
 
@@ -142,6 +135,33 @@ div.rgyPostIt > p > a {
 #weather-box{
     grid-column: 1;
 
+}
+.logout{
+    grid-column: 3;
+}
+.btnStyle{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(1, 1, 1, 0);
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(to top left,
+                        rgba(0, 0, 0, .2),
+                        rgba(0, 0, 0, .2) 30%,
+                        rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .2),
+                inset -2px -2px 3px rgba(0, 0, 0, .2);
+}
+.btnStyle:hover {
+    background-color: rgba(255, 255, 255, .8);
+}
+.btnStyle:active{
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .2),
+                inset -2px -2px 3px rgba(0, 0, 0, .2);
 }
 .a{
     grid-area: a;
