@@ -8,25 +8,28 @@
     <title>My todo-list</title>
   </head>
   <body>
+    <div class = "overlay" id = "firstWindow">
+        <form class = "beforeIogin hidden" id="login-form">
+            <h1> Nice to meet you! </h1> 
+            <h1> What`s your name? </h1> 
+            <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="Put your name here!"/>
+            <!-- <input type="submit" value="Log In" id="loginBtn"> -->
+        </form>
+    </div>
     <section class = "container">
-        <div class = "overlay" id = "firstWindow">
-            <form class = "beforeIogin hidden" id="login-form">
-                <h1> Nice to meet you! </h1> 
-                <h1> What`s your name? </h1> 
-                <input
-                required
-                maxlength="15"
-                type="text"
-                placeholder="Put your name here!"/>
-                <input type="submit" value="Log In" id="loginBtn">
-            </form>
-        </div>
         <div class = "header box" id = "header-container">
             <div class = "weather box" id="weather-box">
                 <span style = "font-family: Arial, Helvetica, sans-serif;"></span><br>
                 <span style = "font-family: Arial, Helvetica, sans-serif;"></span>
             </div>
             <h1 class="hidden" id="greeting"></h1>   <!--그리팅 문구-->
+            <div class = "logout box " id="logout-box">
+                    <button class = "btnStyle" type ="button"> Logout </button>
+            </div>
         </div>
         <div class = "a box" id="a-box">
             <div class = "clock box" id ="clock-box">
