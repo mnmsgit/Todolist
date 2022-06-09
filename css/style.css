@@ -195,3 +195,10 @@ div.rgyPostIt > p > a {
 .footer{
     grid-area: footer;
 }
+ul {
+    display: block;
+    list-style-type: none;
+}
+.logo{
+    margin: 20px 0px;
+}
